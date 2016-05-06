@@ -3,11 +3,9 @@ class ArticlesController < ApplicationController
     
     def index
         @articles = Article.all
-        @tag = Tag.all
     end
     def show
         @article = Article.find(params[:id])
-        @tag = Tag.all
         @comment = Comment.new
         @comment.article_id = @article.id
     end
