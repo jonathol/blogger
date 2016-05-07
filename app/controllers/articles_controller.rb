@@ -9,6 +9,9 @@ class ArticlesController < ApplicationController
         @comment = Comment.new
         @comment.article_id = @article.id
     end
+    
+    before_filter :zero_authors_or_authenticated, only: [:new, :create, :destroy, :edit, :update]
+    
     def new
         @article = Article.new
     end

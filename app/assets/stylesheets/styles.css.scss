@@ -8,6 +8,13 @@ body {
   }
 }
 
+table {
+   border-width: 1px;
+   border-style: solid;
+   border-collapse: separate;
+   width: 400px;
+}
+
 a {
   color: #0000FF;
   img {
